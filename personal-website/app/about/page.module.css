@@ -1,0 +1,72 @@
+.container {
+  min-height: 100vh;
+  padding: 8rem 2rem 4rem;
+}
+
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  letter-spacing: -0.02em;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.section p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.section h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list li {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #666;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  opacity: 0.5;
+}
+
+.section a {
+  opacity: 0.7;
+}
+
+.section a:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 6rem 1.5rem 3rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}

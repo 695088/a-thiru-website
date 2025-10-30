@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import styles from './page.module.css';
-import { getAllProjects } from '@/lib/projects';
+import { getAllAcademic } from '@/lib/academic';
 
-export default function Projects() {
-  const projects = getAllProjects();
+export default function Academic() {
+  const items = getAllAcademic();
 
   return (
     <div className={styles.container}>
@@ -11,15 +11,15 @@ export default function Projects() {
         <Link href="/work" className={styles.back}>
           ← Back to Work
         </Link>
-        <h1 className={styles.title}>Projects</h1>
+        <h1 className={styles.title}>Academic</h1>
         <div className={styles.list}>
-          {projects.map((project) => (
-            <Link href={`/work/projects/${project.slug}`} key={project.slug} className={styles.item}>
-              <div className={styles.date}>{project.date}</div>
-              <h2>{project.title}</h2>
-              {project.tags && project.tags.length > 0 && (
+          {items.map((item) => (
+            <Link href={`/work/academic/${item.slug}`} key={item.slug} className={styles.item}>
+              <div className={styles.date}>{item.date}</div>
+              <h2>{item.title}</h2>
+              {item.tags && item.tags.length > 0 && (
                 <div className={styles.tags}>
-                  {project.tags.map((tag) => (
+                  {item.tags.map((tag) => (
                     <span key={tag} className={styles.tag}>
                       {tag}
                     </span>
@@ -33,3 +33,5 @@ export default function Projects() {
     </div>
   );
 }
+
+

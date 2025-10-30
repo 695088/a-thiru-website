@@ -47,6 +47,93 @@
   padding-left: 0.5rem;
 }
 
+.date {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 0.75rem;
+  font-weight: 300;
+}
+
+.item h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.75rem;
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  background: #f5f5f5;
+  border-radius: 2px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 6rem 1.5rem 3rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}
+
+.container {
+  min-height: 100vh;
+  padding: 8rem 2rem 4rem;
+}
+
+.content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.back {
+  display: inline-block;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.back:hover {
+  opacity: 1;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  letter-spacing: -0.02em;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.item {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #e5e5e5;
+  transition: all 0.2s ease;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item:hover {
+  padding-left: 0.5rem;
+}
+
 .header {
   display: flex;
   justify-content: space-between;

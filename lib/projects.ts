@@ -11,6 +11,7 @@ export interface ProjectItem {
   date: string;
   tags?: string[];
   featured?: boolean;
+  blurb?: string;
 }
 
 export function getProjectSlugs(): string[] {
@@ -36,6 +37,7 @@ export function getProjectBySlug(slug: string): ProjectItem {
     date: data.date || '',
     tags: data.tags || [],
     featured: Boolean(data.featured),
+    blurb: data.blurb || '',
   };
 }
 

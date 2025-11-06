@@ -11,6 +11,7 @@ export interface BlogPost {
   date: string;
   tags?: string[];
   featured?: boolean;
+  blurb?: string;
 }
 
 export function getBlogSlugs(): string[] {
@@ -36,6 +37,7 @@ export function getBlogBySlug(slug: string): BlogPost {
     date: data.date || '',
     tags: data.tags || [],
     featured: Boolean(data.featured),
+    blurb: data.blurb || '',
   };
 }
 

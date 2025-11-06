@@ -118,7 +118,9 @@ export default function Work() {
                     : item.type === 'Project'
                     ? `/work/projects/${item.slug}`
                     : `/work/blogs/${item.slug}`;
-                const blurb = getBlurb(item.content);
+                const blurb = (item as any).blurb && String((item as any).blurb).trim().length > 0
+                  ? String((item as any).blurb)
+                  : getBlurb(item.content);
                 return (
                   <Link key={`${item.type}-${item.slug}`} href={href} className={styles.featuredItem}>
                     <h3 className={styles.featuredItemTitle}>{item.title}</h3>

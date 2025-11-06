@@ -11,6 +11,7 @@ export interface AcademicItem {
   date: string;
   tags?: string[];
   featured?: boolean;
+  blurb?: string;
 }
 
 export function getAcademicSlugs(): string[] {
@@ -36,6 +37,7 @@ export function getAcademicBySlug(slug: string): AcademicItem {
     date: data.date || '',
     tags: data.tags || [],
     featured: Boolean(data.featured),
+    blurb: data.blurb || '',
   };
 }
 

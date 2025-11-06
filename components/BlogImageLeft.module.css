@@ -1,0 +1,33 @@
+.container {
+  float: left;
+  margin: 0 2rem 1rem 0;
+  width: 100%;
+  max-width: 400px;
+  clear: left;
+}
+
+.imageWrapper {
+  width: 100%;
+  overflow: hidden;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+.caption {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: #666;
+  text-align: left;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* Responsive: on small screens, make it full width */
+@media (max-width: 768px) {
+  .container {
+    float: none;
+    margin: 2rem auto;
+    max-width: 100%;
+  }
+}
+

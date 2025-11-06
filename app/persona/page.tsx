@@ -40,17 +40,17 @@ export default function Persona() {
         </div>
 
         <div className={styles.section}>
-          <h2 className={styles.sectionTitle}>Future Section 1</h2>
+          <h2 className={styles.sectionTitle}>My Identity</h2>
           <p>
-            This section is reserved for future content additions. You can add your thoughts, experiences, or updates here.
+            insert identity here
           </p>
         </div>
 
 
         <div className={styles.section}>
-          <h2 className={styles.sectionTitle}>Future Section 2</h2>
+          <h2 className={styles.sectionTitle}>My Goals</h2>
           <p>
-            This section is reserved for future content additions. You can add your thoughts, experiences, or updates here.
+            insert goals here
           </p>
         </div>
       </div>

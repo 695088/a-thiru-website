@@ -4,6 +4,8 @@ import { MDXRemote } from 'next-mdx-remote';
 import { Chart } from './Chart';
 import { D3Visualization } from './D3Visualization';
 import { BlogImage } from './BlogImage';
+import { BlogImageLeft } from './BlogImageLeft';
+import { BlogVideo } from './BlogVideo';
 import { serialize } from 'next-mdx-remote/serialize';
 import { useEffect, useState } from 'react';
 
@@ -15,6 +17,8 @@ const components = {
   Chart,
   D3Visualization,
   BlogImage,
+  BlogImageLeft,
+  BlogVideo,
   h1: (props: any) => <h1 style={{ fontSize: '2.5rem', fontWeight: 300, marginBottom: '1.5rem', letterSpacing: '-0.02em' }} {...props} />,
   h2: (props: any) => <h2 style={{ fontSize: '1.5rem', fontWeight: 400, marginTop: '3rem', marginBottom: '1rem', letterSpacing: '-0.01em' }} {...props} />,
   h3: (props: any) => <h3 style={{ fontSize: '1.2rem', fontWeight: 400, marginTop: '2rem', marginBottom: '0.75rem' }} {...props} />,

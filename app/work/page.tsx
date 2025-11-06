@@ -91,7 +91,7 @@ export default function Work() {
       .filter((b) => Boolean(b.featured))
       .slice(0, 2)
       .map((i) => ({ type: 'Blog', ...i })),
-  ].slice(0, 4);
+  ].slice(0, 5);
 
   // Collect all unique tags from all content
   const allTags = new Set<string>();

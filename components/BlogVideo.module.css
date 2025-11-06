@@ -1,0 +1,24 @@
+.container {
+  margin: 3rem 0;
+  width: 100%;
+}
+
+.videoWrapper {
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+  border-radius: 4px;
+}
+
+.videoWrapper video {
+  display: block;
+}
+
+.caption {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+  font-style: italic;
+}
+

@@ -46,6 +46,7 @@ export default function Persona() {
           </p>
         </div>
 
+
         <div className={styles.section}>
           <h2 className={styles.sectionTitle}>Future Section 2</h2>
           <p>
@@ -53,6 +54,11 @@ export default function Persona() {
           </p>
         </div>
       </div>
+
+
+
+
+
     </div>
   );
 }

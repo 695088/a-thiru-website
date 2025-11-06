@@ -26,6 +26,37 @@ function getExcerpt(content: string, maxLength: number = 150): string {
   return plainText.substring(0, maxLength).trim() + '...';
 }
 
+// Helper function to extract blurb (max 2 sentences) from content
+function getBlurb(content: string): string {
+  // Remove markdown syntax and get clean text
+  const plainText = content
+    .replace(/^#+\s+/gm, '') // Remove headers
+    .replace(/\[([^\]]+)\]\([^\)]+\)/g, '$1') // Remove links, keep text
+    .replace(/\*\*([^\*]+)\*\*/g, '$1') // Remove bold
+    .replace(/\*([^\*]+)\*/g, '$1') // Remove italic
+    .replace(/`([^`]+)`/g, '$1') // Remove code
+    .replace(/<[^>]+>/g, '') // Remove HTML tags
+    .replace(/\n+/g, ' ') // Replace newlines with spaces
+    .trim();
+  
+  // Split by sentence endings
+  const sentences = plainText.split(/([.!?]+)/).filter(s => s.trim().length > 0);
+  
+  // Reconstruct sentences with their punctuation
+  const reconstructedSentences: string[] = [];
+  for (let i = 0; i < sentences.length; i += 2) {
+    if (i + 1 < sentences.length) {
+      reconstructedSentences.push(sentences[i] + sentences[i + 1]);
+    } else {
+      reconstructedSentences.push(sentences[i]);
+    }
+  }
+  
+  // Return first 2 sentences, or first sentence if only one exists
+  const blurb = reconstructedSentences.slice(0, 2).join(' ').trim();
+  return blurb || plainText.substring(0, 200).trim() + '...';
+}
+
 export default function Work() {
   const projects = getAllProjects();
   const academic = getAllAcademic();
@@ -87,11 +118,11 @@ export default function Work() {
                     : item.type === 'Project'
                     ? `/work/projects/${item.slug}`
                     : `/work/blogs/${item.slug}`;
-                const excerpt = getExcerpt(item.content);
+                const blurb = getBlurb(item.content);
                 return (
                   <Link key={`${item.type}-${item.slug}`} href={href} className={styles.featuredItem}>
                     <h3 className={styles.featuredItemTitle}>{item.title}</h3>
-                    <p className={styles.featuredItemExcerpt}>{excerpt}</p>
+                    <p className={styles.featuredItemBlurb}>{blurb}</p>
                     <div className={styles.featuredItemMeta}>
                       <span className={styles.featuredItemDate}>{item.date}</span>
                       {item.tags && item.tags.length > 0 && (

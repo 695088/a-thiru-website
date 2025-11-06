@@ -66,6 +66,14 @@
   margin: 0;
 }
 
+.featuredItemBlurb {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 0 0.5rem 0;
+  font-weight: 400;
+}
+
 .featuredItemExcerpt {
   font-size: 0.95rem;
   line-height: 1.6;

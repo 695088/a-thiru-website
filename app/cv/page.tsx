@@ -75,16 +75,6 @@ export default function CV() {
           <div className={styles.item}>
             <div className={styles.header}>
               <h3>Advanced Zipperman Associate</h3>
-              <span className={styles.date}>December 2024 - May 2025</span>
-            </div>
-            <p className={styles.institution}>Eller College of Management - McGuire Center for Entrepreneurship</p>
-            <p className={styles.description}>
-            </p>
-          </div>
-
-          <div className={styles.item}>
-            <div className={styles.header}>
-              <h3>Advanced Zipperman Associate</h3>
               <span className={styles.date}>May 2025 - Present</span>
             </div>
             <p className={styles.institution}>Eller College of Management - Department of Management Information Systems</p>
@@ -117,9 +107,8 @@ export default function CV() {
         </div>
 
         <div className={styles.section}>
-         
-         <h2>Financial Skills</h2>
-         <div className={styles.skills}>
+          <h2>Financial Skills</h2>
+          <div className={styles.skills}>
             <span>Bloomberg Terminal</span>
             <span>Morningstar</span>
             <span>FactSet</span>
@@ -129,10 +118,9 @@ export default function CV() {
             <span>CQG One</span>
             <span>TradingView</span>
           </div>
-         
-         </div>
+        </div>
 
-         <div className={styles.section}>
+        <div className={styles.section}>
           <h2>Technical Skills</h2>
           <div className={styles.skills}>
             <span>R</span>
@@ -158,7 +146,7 @@ export default function CV() {
         </div>
 
         <div className={styles.download}>
-          <a href="/cv.pdf" download className={styles.button}>
+          <a href="/resume.pdf" download className={styles.button}>
             Download PDF →
           </a>
         </div>

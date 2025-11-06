@@ -67,6 +67,21 @@
   color: #666;
 }
 
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+
+.tag {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  background: #f5f5f5;
+  border-radius: 2px;
+  color: #666;
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 6rem 1.5rem 3rem;

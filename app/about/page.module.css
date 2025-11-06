@@ -4,8 +4,28 @@
 }
 
 .content {
-  max-width: 600px;
+  max-width: 1000px;
   margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.mainContent {
+  flex: 1;
+  max-width: 600px;
+}
+
+.imageContainer {
+  flex-shrink: 0;
+  width: 300px;
+}
+
+.profileImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .title {
@@ -68,5 +88,16 @@
 
   .title {
     font-size: 2rem;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .imageContainer {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
   }
 }

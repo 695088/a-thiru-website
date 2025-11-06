@@ -56,7 +56,6 @@ export default function CV() {
             </p>
           </div>
 
-
         </div>
 
         <div className={styles.section}>

@@ -17,7 +17,6 @@ export default function CV() {
             <p className={styles.description}>
               <li><u>Dean's List:</u> Fall 2023, Spring 2024, Fall 2024, Spring 2025</li>
               <li>Preceptor - BNAN 225 (Programming Fundamentals for Business Analytics)</li>
-              <li><u>Relevant Coursework:</u> Data Management, Business Analytics, Systems Analysis and Design, Database Management Systems, Programming for Business Applications</li>
             </p>
           </div>
         </div>
@@ -117,14 +116,28 @@ export default function CV() {
             </p>
             <ul>
               <li>Microsoft Excel Collegiate Championship - Flagstaff Regional Qualifier</li>
-              <li>Chicago Mercantile Exchange - Trading Challenge</li>
+              <li>Chicago Mercantile Exchange Trading Challenge</li>
               <li>Bloomberg Global Trading Competition</li>
-              <li>Stevens Institute of Technology - High Frequency Trading Competition</li>
+              <li>Stevens Institute of Technology High Frequency Trading Competition</li>
               <li>Fordham University - Sustainable Fixed Income Research Competition</li>
               <li>Microsoft Excel Collegiate Championship - World Championship - Las Vegas</li>
             </ul>
           </div>
         </div>
+
+      <div className ={styles.section}>
+        <h2>Relevant Coursework</h2>
+        <div className={styles.courses}>
+          <span>Data Management</span>
+          <span>Business Analytics</span>
+          <span>Systems Analysis and Design</span>
+          <span>Database Management Systems</span>
+          <span>Programming for Business Applications</span>
+          <span>Data Visualization</span>
+          <span>Statistical Analysis for Business</span>
+          <span>Operations Management</span>
+        </div>
+      </div>
 
         <div className={styles.section}>
           <h2>Financial Skills</h2>

@@ -18,15 +18,6 @@ export default function About() {
               I have a passion for leveraging data to drive business insights and improve decision-making processes.
             </p>
 
-            <div className={styles.section}>
-              <h2>My Professional Persona</h2>
-              <p>
-              </p>
-              <p>
-              <a href="/persona">View my professional persona →</a>
-              </p>
-            </div>
-
           </div>
 
           <div className={styles.section}>
@@ -39,15 +30,6 @@ export default function About() {
           </div>
         </div>
         
-        <div className={styles.imageContainer}>
-          <Image
-            src="/images/me.jpg"
-            alt="Aditya"
-            width={300}
-            height={300}
-            className={styles.profileImage}
-          />
-        </div>
       </div>
     </div>
   );

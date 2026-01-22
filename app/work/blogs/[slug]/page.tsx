@@ -4,9 +4,7 @@ import styles from './page.module.css';
 import { getAllBlogs, getBlogBySlug } from '@/lib/blogs';
 import dynamic from 'next/dynamic';
 
-const MDXContent = dynamic(() => import('@/components/MDXContent'), {
-  ssr: false,
-});
+const MDXContent = dynamic(() => import('@/components/MDXContent'));
 
 export function generateStaticParams() {
   const blogs = getAllBlogs();

@@ -90,7 +90,8 @@ export default function CV() {
           </div>
         </div>
 
-        <div className={styles.item}>
+        <div className={styles.section}>
+          <div className={styles.item}>
             <div className={styles.header}>
               <h3>Head of Technology | Founding Member</h3>
               <span className={styles.date}>November 2025 - Present</span>

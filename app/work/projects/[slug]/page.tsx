@@ -4,9 +4,7 @@ import styles from './page.module.css';
 import { getAllProjects, getProjectBySlug } from '@/lib/projects';
 import dynamic from 'next/dynamic';
 
-const MDXContent = dynamic(() => import('@/components/MDXContent'), {
-  ssr: false,
-});
+const MDXContent = dynamic(() => import('@/components/MDXContent'));
 
 export function generateStaticParams() {
   const items = getAllProjects();

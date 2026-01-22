@@ -4,9 +4,7 @@ import styles from './page.module.css';
 import { getAllAcademic, getAcademicBySlug } from '@/lib/academic';
 import dynamic from 'next/dynamic';
 
-const MDXContent = dynamic(() => import('@/components/MDXContent'), {
-  ssr: false,
-});
+const MDXContent = dynamic(() => import('@/components/MDXContent'));
 
 export function generateStaticParams() {
   const items = getAllAcademic();

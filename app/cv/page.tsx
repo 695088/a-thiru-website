@@ -1,4 +1,5 @@
 import styles from './page.module.css';
+import CourseList from '@/components/CourseList';
 
 export default function CV() {
   return (
@@ -23,7 +24,6 @@ export default function CV() {
 
         <div className={styles.section}>
           <h2>Experience</h2>
-          
           <div className={styles.item}>
             <div className={styles.header}>
               <h3>Investment Analyst Intern</h3>
@@ -61,7 +61,7 @@ export default function CV() {
           
           <div className={styles.item}>
             <div className={styles.header}>
-              <h3>SPARK Entrepreneurship Program</h3>
+              <h3>SPARK Entrepreneurship Program Member</h3>
               <span className={styles.date}>December 2024 - May 2025</span>
             </div>
             <p className={styles.institution}>Eller College of Management - McGuire Center for Entrepreneurship</p>
@@ -71,8 +71,8 @@ export default function CV() {
 
           <div className={styles.item}>
             <div className={styles.header}>
-              <h3>Microsoft Excel Collegiate Challenger (Varsity)</h3>
-              <span className={styles.date}>December 2024 - May 2025</span>
+              <h3>Microsoft Excel Collegiate Challenger</h3>
+              <span className={styles.date}>December 2023 - Present</span>
             </div>
             <p className={styles.institution}>Eller College of Management - Department Of Finance</p>
             <p className={styles.description}>
@@ -91,12 +91,21 @@ export default function CV() {
         </div>
 
         <div className={styles.section}>
+          <h2>Organizations</h2>
           <div className={styles.item}>
             <div className={styles.header}>
               <h3>Head of Technology | Founding Member</h3>
               <span className={styles.date}>November 2025 - Present</span>
             </div>
             <p className={styles.institution}>FANS of ZONA</p>
+            <p className={styles.description}>
+            </p>
+          </div>
+        </div>
+
+        <div className={styles.section}>
+          <h2>Projects</h2>
+          <div className={styles.item}>
             <p className={styles.description}>
             </p>
           </div>
@@ -126,18 +135,9 @@ export default function CV() {
           </div>
         </div>
 
-      <div className ={styles.section}>
+      <div className={styles.section}>
         <h2>Relevant Coursework</h2>
-        <div className={styles.courses}>
-          <span>Data Management</span>
-          <span>Business Analytics</span>
-          <span>Systems Analysis and Design</span>
-          <span>Database Management Systems</span>
-          <span>Programming for Business Applications</span>
-          <span>Data Visualization</span>
-          <span>Statistical Analysis for Business</span>
-          <span>Operations Management</span>
-        </div>
+        <CourseList />
       </div>
 
         <div className={styles.section}>

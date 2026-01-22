@@ -41,8 +41,9 @@ export function generateStaticParams() {
   }));
 }
 
-export default function TagPage({ params }: { params: { tag: string } }) {
-  const tag = decodeURIComponent(params.tag);
+export default async function TagPage({ params }: { params: Promise<{ tag: string }> }) {
+  const { tag: tagParam } = await params;
+  const tag = decodeURIComponent(tagParam);
   const projects = getAllProjects();
   const academic = getAllAcademic();
   const blogs = getAllBlogs();

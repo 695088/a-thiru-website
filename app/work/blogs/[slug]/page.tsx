@@ -13,11 +13,12 @@ export function generateStaticParams() {
   }));
 }
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
+export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   let blog;
   
   try {
-    blog = getBlogBySlug(params.slug);
+    blog = getBlogBySlug(slug);
   } catch (error) {
     notFound();
   }

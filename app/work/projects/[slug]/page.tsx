@@ -13,11 +13,12 @@ export function generateStaticParams() {
   }));
 }
 
-export default function ProjectPost({ params }: { params: { slug: string } }) {
+export default async function ProjectPost({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   let item;
 
   try {
-    item = getProjectBySlug(params.slug);
+    item = getProjectBySlug(slug);
   } catch (error) {
     notFound();
   }

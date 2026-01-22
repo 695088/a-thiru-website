@@ -1,0 +1,120 @@
+.courseList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.courseItem {
+  width: 100%;
+}
+
+.courseBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  font-family: inherit;
+}
+
+.courseBox:hover {
+  background: #ebebeb;
+  border-color: #d0d0d0;
+}
+
+.courseBox.expanded {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.courseName {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: inherit;
+}
+
+.arrow {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: inherit;
+  transition: transform 0.2s ease;
+  line-height: 1;
+}
+
+.dropdown {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0;
+}
+
+.dropdown.open {
+  max-height: 500px;
+  padding: 1rem 0;
+}
+
+.dropdownContent {
+  padding: 0 1.25rem;
+  border-left: 2px solid #e5e5e5;
+  margin-left: 1.25rem;
+}
+
+.description {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #666;
+  margin-bottom: 0.75rem;
+}
+
+.detailsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detailsList li {
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: #888;
+  padding-left: 1rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.detailsList li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .courseBox {
+    padding: 0.875rem 1rem;
+  }
+
+  .courseName {
+    font-size: 0.9rem;
+  }
+
+  .dropdownContent {
+    padding: 0 1rem;
+    margin-left: 1rem;
+  }
+
+  .description {
+    font-size: 0.85rem;
+  }
+
+  .detailsList li {
+    font-size: 0.8rem;
+  }
+}
+

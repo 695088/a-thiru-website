@@ -13,11 +13,12 @@ export function generateStaticParams() {
   }));
 }
 
-export default function AcademicPost({ params }: { params: { slug: string } }) {
+export default async function AcademicPost({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   let item;
 
   try {
-    item = getAcademicBySlug(params.slug);
+    item = getAcademicBySlug(slug);
   } catch (error) {
     notFound();
   }

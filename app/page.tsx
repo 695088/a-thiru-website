@@ -10,14 +10,27 @@ export default function Home() {
         </p>
         <div className={styles.description}>
           <p>
-            Welcome to my personal website. Here you can find information about my work,
+            Welcome to my personal website. Here you can find more about me, my work,
             projects, and interests.
           </p>
         </div>
+        {/*
         <div className={styles.links}>
-          <a href="/about">About me →</a>
           <a href="/work">View work →</a>
           <a href="/cv">CV →</a>
+        </div>
+        */
+        }
+        <div className={styles.section}>
+          <h2>Connect With Me:</h2>
+          <div className={styles.sectionLinks}>
+            <p>
+              <a href="mailto:adityat@arizona.edu">adityat@arizona.edu → </a>
+              <br />
+              <a href="https://www.linkedin.com/in/thirumalai-aditya"> linkedin.com/in/thirumalai-aditya →</a>
+            </p>
+
+          </div>
         </div>
       </div>
     </div>

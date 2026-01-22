@@ -17,7 +17,6 @@ export default function CV() {
             <p className={styles.description}>
               <li><u>Dean's List:</u> Fall 2023, Spring 2024, Fall 2024, Spring 2025</li>
               <li>Preceptor - BNAN 225 (Programming Fundamentals for Business Analytics)</li>
-              <li>Junior Varsity - Microsoft Excel Collegiate Championship</li>
               <li><u>Relevant Coursework:</u> Data Management, Business Analytics, Systems Analysis and Design, Database Management Systems, Programming for Business Applications</li>
             </p>
           </div>
@@ -73,10 +72,31 @@ export default function CV() {
 
           <div className={styles.item}>
             <div className={styles.header}>
+              <h3>Microsoft Excel Collegiate Challenger (Varsity)</h3>
+              <span className={styles.date}>December 2024 - May 2025</span>
+            </div>
+            <p className={styles.institution}>Eller College of Management - Department Of Finance</p>
+            <p className={styles.description}>
+            </p>
+          </div>
+
+          <div className={styles.item}>
+            <div className={styles.header}>
               <h3>Advanced Zipperman Associate</h3>
               <span className={styles.date}>May 2025 - Present</span>
             </div>
             <p className={styles.institution}>Eller College of Management - Department of Management Information Systems</p>
+            <p className={styles.description}>
+            </p>
+          </div>
+        </div>
+
+        <div className={styles.item}>
+            <div className={styles.header}>
+              <h3>Head of Technology | Founding Member</h3>
+              <span className={styles.date}>November 2025 - Present</span>
+            </div>
+            <p className={styles.institution}>FANS of ZONA</p>
             <p className={styles.description}>
             </p>
           </div>
@@ -101,6 +121,7 @@ export default function CV() {
               <li>Bloomberg Global Trading Competition</li>
               <li>Stevens Institute of Technology - High Frequency Trading Competition</li>
               <li>Fordham University - Sustainable Fixed Income Research Competition</li>
+              <li>Microsoft Excel Collegiate Championship - World Championship - Las Vegas</li>
             </ul>
           </div>
         </div>

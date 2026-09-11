@@ -22,8 +22,20 @@ export default function CV() {
           </div>
         </div>
 
+
         <div className={styles.section}>
           <h2>Experience</h2>
+          
+          <div className={styles.item}>
+            <div className={styles.header}>
+              <h3>Real Assets (Infrastructure & Natural Resources) Intern</h3>
+              <span className={styles.date}>June 2026 - August 2026</span>
+            </div>
+            <p className={styles.institution}>North Carolina Investment Authority (NCIA)</p>
+            <p className={styles.description}>
+            </p>
+          </div>
+
           <div className={styles.item}>
             <div className={styles.header}>
               <h3>Investment Analyst Intern</h3>
@@ -72,7 +84,7 @@ export default function CV() {
           <div className={styles.item}>
             <div className={styles.header}>
               <h3>Microsoft Excel Collegiate Challenger</h3>
-              <span className={styles.date}>December 2023 - Present</span>
+              <span className={styles.date}>December 2023 - May 2025</span>
             </div>
             <p className={styles.institution}>Eller College of Management - Department Of Finance</p>
             <p className={styles.description}>
@@ -88,6 +100,18 @@ export default function CV() {
             <p className={styles.description}>
             </p>
           </div>
+
+          <div className={styles.item}>
+            <div className={styles.header}>
+              <h3>Artificial Intelligence Laboratory Student</h3>
+              <span className={styles.date}>November 2025 - Present</span>
+            </div>
+            <p className={styles.institution}>Eller College of Management - Department Of Management Information Systems</p>
+            <p className={styles.description}>
+            </p>
+          </div>
+
+          
         </div>
 
         <div className={styles.section}>

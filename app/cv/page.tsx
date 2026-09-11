@@ -119,7 +119,7 @@ export default function CV() {
           <div className={styles.item}>
             <div className={styles.header}>
               <h3>Head of Technology | Founding Member</h3>
-              <span className={styles.date}>November 2025 - Present</span>
+              <span className={styles.date}>October 2025 - Present</span>
             </div>
             <p className={styles.institution}>FANS of ZONA</p>
             <p className={styles.description}>

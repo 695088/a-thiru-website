@@ -1,6 +1,7 @@
 'use client';
 
 import { MDXRemote } from 'next-mdx-remote';
+import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { Chart } from './Chart';
 import { D3Visualization } from './D3Visualization';
 import { BlogImage } from './BlogImage';
@@ -77,10 +78,15 @@ const components = {
 };
 
 export default function MDXContent({ content }: MDXContentProps) {
-  const [mdxSource, setMdxSource] = useState<any>(null);
+  const [mdxSource, setMdxSource] = useState<MDXRemoteSerializeResult | null>(null);
 
   useEffect(() => {
-    serialize(content, { parseFrontmatter: false }).then(setMdxSource);
+    serialize(content, {
+      parseFrontmatter: false,
+      // Author-controlled MDX uses JSX props such as <Chart data={[...]} />.
+      blockJS: false,
+      blockDangerousJS: true,
+    }).then(setMdxSource);
   }, [content]);
 
   if (!mdxSource) {
